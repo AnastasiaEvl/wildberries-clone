@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wildberries</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="#main"><span class="header__logo">WILDBERRIES</span></a>
+        <div id='courses' class="header__courses">
+            <button class="header__courses-button"><img class="header__course-icon" src="../src/assets/icons/ru-icon.png" alt="ru"><span class="header__courses-button-name" id="ru">RU</span>
+            </button>
+            <button class="header__courses-button"><img class="header__course-icon" src="../src/assets/icons/usd-icon.png" alt="usd"><span class="header__courses-button-name" id="usd">USD</span>
+            </button>
+            <button class="header__courses-button"><img class="header__course-icon" src="../src/assets/icons/byn-icon.png" alt="byn"><span class="header__courses-button-name" id="by">BYN</span>
+            </button>
+        </div>
+        <div class="header__search">
+            <img src="../src/assets/icons/loupe.svg" class="header__search-svg" alt=""/>
+            <label class="header__search-label"
+            ><input id="search-input" class="header__search-input" type="search" placeholder="Искать на Wildberries"
+            /></label>
+        </div>
+        <button class="header__button" type="button" id="header__basket">
+            <div class="header__cart-num" id="cart-num"></div>
+            <img src="../src/assets/icons/shopping-cart.svg" class="header__button-svg" alt="" id="basket-container"/>
+            <span class="header__button-text">Корзина</span>
+        </button>
+    </div>
+</header>
+<main id="main" class="main-content">
+    <div class="container">
+        <h2 class="main-content__title">Хиты продаж:</h2>
+        <section class="main-content__cards"></section>
+        <button id="show-more" class="main-content__button" type="button">Показать ещё &#8595;</button>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__container">
+            <div class="footer__buyers">
+                <button class="footer__title accordion-button">Покупателям</button>
+                <div class="footer__link-content">
+                    <button class="footer__button">Способы оплаты</button>
+                    <button class="footer__button">Возврат товара</button>
+                    <button class="footer__button">Правила продажи товаров</button>
+                    <button class="footer__button">Доставка</button>
+                    <button class="footer__button">Возврат денежных средств</button>
+                </div>
+                <div class="footer__under-title-line"></div>
+            </div>
+            <div class="footer__company">
+                <button class="footer__title accordion-button">Компания</button>
+                <div class="footer__link-content">
+                    <button class="footer__button">О нас</button>
+                    <button class="footer__button">Контакты</button>
+                </div>
+                <div class="footer__under-title-line"></div>
+            </div>
+            <address class="footer__social">
+                <button class="footer__title accordion-button">Мы в соцсетях</button>
+                <div class="footer__link-content">
+                    <a class="footer__link" href="https://vk.com/public42631504" target="_blank">Вконтакте</a>
+                    <a class="footer__link" href="https://ok.ru/wildberriesby" target="_blank">Одноклассники</a>
+                    <a class="footer__link" href="https://www.youtube.com/Wildberriesshop" target="_blank">YouTube</a>
+                </div>
+            </address>
+            <div class="footer__apps">
+                <h3 class="footer__title-apps">Мобильные устройства</h3>
+                <a class="footer__apps-link" href="https://apps.apple.com/by/app/wildberries/id597880187"
+                   target="_blank"
+                ><img class="footer__app" src="../src/assets/pictures/app_store.png" alt="App Store link"
+                /></a>
+                <a href="https://play.google.com/store/apps/details?id=com.wildberries.ru&pli=1" target="_blank"
+                ><img class="footer__app" src="../src/assets/pictures/google_play.png" alt="Google Play link"
+                /></a>
+                <a href="https://appgallery.huawei.com/#/app/C101183325" target="_blank"
+                ><img class="footer__app" src="../src/assets/pictures/appgallery.png" alt="AppGallery link"
+                /></a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <hr class="footer__line"/>
+            <p class="footer__copiright-title">
+                2004—2023 © Wildberries — модный интернет-магазин одежды, обуви<br/>
+                и аксессуаров. Все права защищены.
+            </p>
+            <p class="footer__creators-title">Created by:</p>
+            <p class="footer__creators-names">Natalia Kivchun, Yura Khovavko, Anastasia Evlash, Vladislav Beresnev</p>
+        </div>
+    </div>
+</footer>
+<button class="scroll-top">
+    <a href="#main"
+    >
+        <div class="scroll-top__arrow-container">
+            <span class="scroll-top__arrow"></span></div
+        >
+    </a>
+</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.card {
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    height: auto;
+    width: 100%;
+  }
+  &__title {
+    font-size: 0.8rem;
+    text-align: left;
+    @include media(font-size, (1rem, 1rem));
+    font-family: inherit;
+    display: flex;
+    flex-grow: 1;
+    padding-bottom: 0.5rem;
+  }
+  &__prices {
+    font-size: 1.3rem;
+    @include media(font-size, (1.6rem, 2rem));
+    font-weight: 500;
+    padding: 1rem 0 0.5rem;
+    @include media(padding, (1rem 0, 1rem 0));
+  } 
+  & .btn__basket{
+    width:fit-content;
+    padding: 0.3rem 0.7rem;
+    @include media(padding, (0.7rem 1.3rem, 0.7rem 1.3rem));
+    font-size: 0.9rem;
+    @include media(font-size, (1rem, 1rem));
+    }
+    
+}
+

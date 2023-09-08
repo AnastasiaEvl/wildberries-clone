@@ -1,0 +1,130 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: $header-background-color;
+  z-index: 10;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  & .container {
+    column-gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+    @include media(margin, (2rem auto, 2rem auto));
+    @include media(column-gap, (2rem, 2rem));
+  }
+
+  &__logo {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    display: none;
+    @include media(display, (none, block));
+  }
+
+  ::placeholder {
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
+  &__courses{
+    display: flex;
+    flex-direction: column;
+    @include media(flex-direction, (row, row));
+    gap: 0.1rem;
+    @include media(gap, (0.4rem, 0.5rem));
+    margin-left: -2rem;
+    @include media(margin-left, (-2rem, 0));
+  }
+
+  &__courses-button {
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: $based-border-radius;
+    &:hover {
+      border: 2px solid white;
+    }
+  }
+
+  &__course-icon{
+    margin-right: 0.6rem;
+  }
+
+  &__courses-button-name {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    @include media(font-size, (1rem, 1rem));
+  }
+
+  &__search {
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &:has(.header__search-input:focus) {
+      outline: auto;
+    }
+  }
+
+  &__search-input {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 0 10px;
+    height: 4rem;
+    color: #fff;
+    font-size: 1.3rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__search-label{
+    width: 100%;
+  }
+
+  &__search-svg {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__button-svg {
+    padding-bottom: 5px;
+    width: 2.3rem;
+    display: flex;
+    margin-left: 0.7rem;
+  }
+  &__cart-num{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    margin-left: 35px;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__button-text {
+    color: #fff;
+  }
+  &__button{
+    display: flex;
+    flex-direction: column;
+  }
+}

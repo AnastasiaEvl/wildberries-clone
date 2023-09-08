@@ -1,0 +1,135 @@
+.footer {
+    display: none;
+    visibility: hidden;
+    padding-top: 2rem;
+    background-color: $second-based-color;
+    @include media(display, (block, block));
+    @include media(visibility, (visible, visible));
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+
+    &__link-content{
+        padding: 0.3rem;
+        @include media(display, (none, block));
+
+    }
+
+    &__link-content.show{
+        @include media(max-height, (500px, 500px));
+        @include media(display, (block, block));
+    }
+
+    &__under-title-line{
+        display: none;
+        border-bottom: 1px solid #9783a7;
+        @include media(display, (block, none));
+        @include media(margin-bottom, (1rem, 1rem));
+        @include media(margin-top, (1rem, 1rem));
+    }
+
+    &__buyers{
+        @include media(margin-bottom, (1rem, 1rem));
+        
+    }
+
+    &__company{
+        @include media(margin-bottom, (1rem, 1rem));
+    }
+
+    &__social{
+        font-style: normal;
+        @include media(margin-bottom, (2rem, 2rem));
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 1.3rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 92vw;
+            transform: rotate(135deg);
+            width: 0.7rem;
+            height: 0.7rem;
+            border-top: 0.15rem solid #A488B9;
+            border-right: 0.15rem solid #A488B9;
+            transition: transform 0.3s ease-in-out;
+            @include media(display, (block, none));
+        }
+        &.active::after {
+            transform: rotate(315deg);
+        }
+    }
+
+
+    &__title-apps {
+        color: #fff;
+        font-size: 1.3rem;
+        @include media(margin-left, (0.4rem, 0.4rem));
+        @include media(display, (none, block));
+    }
+
+    &__button {
+        display: flex;
+        margin-top: 0.8rem;
+        color: #B39DC5;
+        font-size: 1.3rem;
+        padding-left: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__button:hover{
+        color: #fff;
+    }
+
+    &__link {
+        display: flex;
+        margin-top: 0.8rem;
+        color: #B39DC5;
+        font-size: 1.3rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__link:hover{
+        color: #fff;
+    }
+
+    &__app {
+        display: flex;
+        height: 3em;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.8rem;
+        @include media(display, (inline-block, flex));
+    }
+
+
+    &__copyright {
+        text-align: center;
+        color:#B39DC5;
+        font-size: 1.1rem;
+    }
+
+
+    &__line {
+        margin-top: 2rem;
+        border-color: #9783a7;
+    }
+
+    &__copiright-title {
+        margin-top: 2rem;
+    }
+
+    &__creators-names {
+        padding-bottom: 1rem;
+    }
+}

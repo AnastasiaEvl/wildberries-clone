@@ -1,0 +1,22 @@
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 15px;
+}
+
+.main-content__cards {
+  padding: 0;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 144px));
+  @include media(
+    grid-template-columns,
+    (repeat(auto-fill, minmax(148px, 200px)), repeat(auto-fill, minmax(148px, 260px)))
+  );
+  grid-template-rows: repeat(3, auto);
+  @include media(grid-template-rows, (repeat(2, auto), repeat(2, auto)));
+  @include media(grid-gap, (1rem, 3rem));
+}

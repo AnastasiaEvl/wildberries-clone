@@ -1,0 +1,53 @@
+.scroll-top {
+    position: fixed;
+    bottom: 1rem;
+    left: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: $based-color;
+    z-index: 10;
+    visibility: hidden;
+    @include media(visibility, (hidden, visible));
+
+    &__arrow-container {
+        cursor: pointer;
+        position: relative;
+        width: 8000px;
+        height: 50px;
+        margin: 20px;
+    }
+
+    &__arrow {
+        position: relative;
+        width: 0.1rem;
+        height: 1.2rem;
+        background-color: #fff;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+        left: 0;
+        display: block;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 1rem;
+            height: 0.1rem;
+            right: -0.2rem;
+            top: 0.1rem;
+            background-color: #fff;
+            transform: rotate(-45deg);
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 1rem;
+            height: 0.1rem;
+            left: -0.1rem;
+            top: 0.18rem;
+            background-color: #fff;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+            transform: rotate(230deg);
+        }
+    }
+}
